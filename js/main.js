@@ -3,8 +3,13 @@ const productos = [
     //Abrigos
     {
         id: "abrigo-01",
-        titulo: "Abrigo 01",
+        titulo: "Desayuno 01",
         imagen: "./img/abrigos/01.jpg",
+        descripcion: [
+                      "2 tortitas",
+                      "1 cafe",
+                      "1 chocolate"
+                    ],
         categoria:{
             nombre: "Abrigos",
             id: "abrigos"
@@ -13,8 +18,13 @@ const productos = [
     },
     {
         id: "abrigo-02",
-        titulo: "Abrigo 02",
+        titulo: "Desayuno 02",
         imagen: "./img/abrigos/02.jpg",
+        descripcion: [
+            "4 tortitas",
+            "2 cafe",
+            "8 chocolate"
+          ],
         categoria:{
             nombre: "Abrigos",
             id: "abrigos"
@@ -23,18 +33,13 @@ const productos = [
     },
     {
         id: "abrigo-03",
-        titulo: "Abrigo 03",
+        titulo: "Desayuno 03",
         imagen: "./img/abrigos/03.jpg",
-        categoria:{
-            nombre: "Abrigos",
-            id: "abrigos"
-        },
-        precio: 1000
-    },
-    {
-        id: "abrigo-04",
-        titulo: "Abrigo 04",
-        imagen: "./img/abrigos/04.jpg",
+        descripcion: [
+            "2 tortitas",
+            "1 cafe",
+            "1 chocolate"
+          ],
         categoria:{
             nombre: "Abrigos",
             id: "abrigos"
@@ -46,8 +51,13 @@ const productos = [
 
     {
         id: "camiseta-01",
-        titulo: "Camiseta 01",
+        titulo: "Bebidas 01",
         imagen: "./img/camisetas/01.jpg",
+        descripcion: [
+            "2 tortitas",
+            "1 cafe",
+            "1 chocolate"
+          ],
         categoria:{
             nombre: "Camisetas",
             id: "camisetas"
@@ -56,8 +66,13 @@ const productos = [
     },
     {
         id: "camiseta-02",
-        titulo: "Camiseta 02",
+        titulo: "Bebidas 02",
         imagen: "./img/camisetas/02.jpg",
+        descripcion: [
+            "2 tortitas",
+            "1 cafe",
+            "1 chocolate"
+          ],
         categoria:{
             nombre: "Camisetas",
             id: "camisetas"
@@ -66,18 +81,13 @@ const productos = [
     },
     {
         id: "camiseta-03",
-        titulo: "Camiseta 03",
+        titulo: "Bebidas 03",
         imagen: "./img/camisetas/03.jpg",
-        categoria:{
-            nombre: "Camisetas",
-            id: "camisetas"
-        },
-        precio: 1000
-    },
-    {
-        id: "camiseta-04",
-        titulo: "Camiseta 04",
-        imagen: "./img/camisetas/04.jpg",
+        descripcion: [
+            "2 tortitas",
+            "1 cafe",
+            "1 chocolate"
+          ],
         categoria:{
             nombre: "Camisetas",
             id: "camisetas"
@@ -89,8 +99,13 @@ const productos = [
 
     {
         id: "pantalon-01",
-        titulo: "Pantalon 01",
+        titulo: "Facturas 01",
         imagen: "./img/pantalones/01.jpg",
+        descripcion: [
+            "2 tortitas",
+            "1 cafe",
+            "1 chocolate"
+          ],
         categoria:{
             nombre: "Pantalones",
             id: "pantalones"
@@ -99,8 +114,13 @@ const productos = [
     },
     {
         id: "pantalon-02",
-        titulo: "Pantalon 02",
+        titulo: "Facturas 02",
         imagen: "./img/pantalones/02.jpg",
+        descripcion: [
+            "2 tortitas",
+            "1 cafe",
+            "1 chocolate"
+          ],
         categoria:{
             nombre: "Pantalones",
             id: "pantalones"
@@ -109,18 +129,13 @@ const productos = [
     },
     {
         id: "pantalon-03",
-        titulo: "Pantalon 03",
+        titulo: "Facturas 03",
         imagen: "./img/pantalones/03.jpg",
-        categoria:{
-            nombre: "Pantalones",
-            id: "pantalones"
-        },
-        precio: 1000
-    },
-    {
-        id: "pantalon-04",
-        titulo: "Pantalon 04",
-        imagen: "./img/pantalones/04.jpg",
+        descripcion: [
+            "2 tortitas",
+            "1 cafe",
+            "1 chocolate"
+          ],
         categoria:{
             nombre: "Pantalones",
             id: "pantalones"
@@ -132,8 +147,7 @@ const productos = [
 const contenedorProductos = document.querySelector("#contenedor-productos");
 const botonesCategorias = document.querySelectorAll(".boton-categoria");
 const tituloPrincipal = document.querySelector("#titulo-principal");
-let botonesAgregar = document.querySelectorAll(".producto-agregar");
-const numerito = document.querySelector("#numerito");
+let botonesVer = document.querySelectorAll(".producto-ver");
 
 function cargarProductos(productosElegidos) {
 
@@ -148,15 +162,17 @@ function cargarProductos(productosElegidos) {
             <div class="producto-detalles">
                 <h3 class="producto-titulo">${producto.titulo}</h3>
                 <p class="producto-precio">$${producto.precio}</p>
-                <button class="producto-agregar" id="${producto.id}">Agregar</button>
+
+                <button class="producto-ver btn" onclick="toggleText('${producto.id}')">Detalles</button>
+                <div id="${producto.id}" class="descripcion">
+                    ${producto.descripcion.map(parrafo => `<p>${parrafo}</p>`).join('')}
+                </div>
             </div>
         `;
 
         contenedorProductos.append(div);
 
     })
-
-    actualizarBotonesAgregar();
 }
 
 cargarProductos(productos);
@@ -180,42 +196,11 @@ botonesCategorias.forEach(boton =>{
     })
 });
 
-function actualizarBotonesAgregar() {
-    botonesAgregar = document.querySelectorAll(".producto-agregar");
-
-    botonesAgregar.forEach(boton => {
-        boton.addEventListener("click", agregarAlCarrito);
-    });
-}
-
-let productosEnCarrito;
-
-let productosEnCarritoLS = localStorage.getItem("productos-en-carrito");
-
-if(productosEnCarritoLS){
-    productosEnCarrito = JSON.parse(productosEnCarritoLS);
-    actualizarNumerito();
-} else {
-    productosEnCarrito = [];
-}
-
-function agregarAlCarrito(e) {
-    const idBoton = e.currentTarget.id;
-    const productoAgregado = productos.find(producto => producto.id === idBoton);
-
-    if(productosEnCarrito.some(producto => producto.id === idBoton)){
-        const index = productosEnCarrito.findIndex(producto => producto.id === idBoton);
-        productosEnCarrito[index].cantidad++;
+function toggleText(id) {
+    var descripcion = document.getElementById(id);
+    if (descripcion.style.display === "none") {
+      descripcion.style.display = "block";
     } else {
-        productoAgregado.cantidad = 1;
-        productosEnCarrito.push(productoAgregado);
+      descripcion.style.display = "none";
     }
-    actualizarNumerito();
-
-    localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
-}
-
-function actualizarNumerito() {
-    let nuevoNumerito = productosEnCarrito.reduce((acc, producto) => acc + producto.cantidad, 0);
-    numerito.innerText = nuevoNumerito;
-}
+  }
