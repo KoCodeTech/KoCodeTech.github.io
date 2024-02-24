@@ -11,7 +11,7 @@ const productos = [
                       "1 chocolate"
                     ],
         categoria:{
-            nombre: "Abrigos",
+            nombre: "Desayunos",
             id: "abrigos"
         },
         precio: 1000
@@ -26,7 +26,7 @@ const productos = [
             "8 chocolate"
           ],
         categoria:{
-            nombre: "Abrigos",
+            nombre: "Desayunos",
             id: "abrigos"
         },
         precio: 1000
@@ -41,7 +41,7 @@ const productos = [
             "1 chocolate"
           ],
         categoria:{
-            nombre: "Abrigos",
+            nombre: "Desayunos",
             id: "abrigos"
         },
         precio: 1000
@@ -59,7 +59,7 @@ const productos = [
             "1 chocolate"
           ],
         categoria:{
-            nombre: "Camisetas",
+            nombre: "Bebidas",
             id: "camisetas"
         },
         precio: 1000
@@ -74,7 +74,7 @@ const productos = [
             "1 chocolate"
           ],
         categoria:{
-            nombre: "Camisetas",
+            nombre: "Bebidas",
             id: "camisetas"
         },
         precio: 1000
@@ -89,7 +89,7 @@ const productos = [
             "1 chocolate"
           ],
         categoria:{
-            nombre: "Camisetas",
+            nombre: "Bebidas",
             id: "camisetas"
         },
         precio: 1000
@@ -107,7 +107,7 @@ const productos = [
             "1 chocolate"
           ],
         categoria:{
-            nombre: "Pantalones",
+            nombre: "Facturas",
             id: "pantalones"
         },
         precio: 1000
@@ -122,7 +122,7 @@ const productos = [
             "1 chocolate"
           ],
         categoria:{
-            nombre: "Pantalones",
+            nombre: "Facturas",
             id: "pantalones"
         },
         precio: 1000
@@ -137,7 +137,7 @@ const productos = [
             "1 chocolate"
           ],
         categoria:{
-            nombre: "Pantalones",
+            nombre: "Facturas",
             id: "pantalones"
         },
         precio: 1000

@@ -194,3 +194,74 @@ main {
     padding: .4rem;
     border-radius: 1rem;
   }
+
+/* Estilos específicos para dispositivos móviles */
+
+@media screen and (max-width: 800px) {
+    .wrapper {
+        grid-template-columns: 1fr; /* Cambiar a una sola columna */
+    }
+
+    aside {
+        height: auto; /* Altura automática */
+        position: static; /* Eliminar posición fija */
+        padding: 1rem; /* Reducir el relleno */
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .boton-menu {
+        padding: .5rem; /* Reducir el relleno */
+    }
+
+    .boton-menu.active{
+        border-radius: 1rem;
+    }
+
+    .boton-menu.active::before {
+        content: var(--clr-gray);
+    }
+
+    .boton-menu.active::after {
+        content: var(--clr-gray);
+    }
+
+    main {
+        margin: 1rem auto; /* Centrar y ajustar el margen */
+        margin-bottom: auto;
+        border-radius: 0%;
+        padding: 2rem; /* Aumentar el relleno */
+    }
+
+    .producto {
+        display: flex;
+    }
+
+    .contenedor-productos {
+        grid-template-columns: repeat(1, 1fr); /* Cambiar a dos columnas */
+    }
+
+    .producto-imagen {
+        width: 80px;
+        height: 50px;
+    }
+
+    .producto-detalles {
+        display: flex;
+        flex-direction: row;
+        margin-top: 0; /* Eliminar el margen superior */
+    }
+
+    .descripcion {
+        display: none; /* Mostrar la descripción */
+        margin-top: 1rem; /* Añadir un margen superior */
+    }
+
+    footer {
+        display: none;
+    }
+}
