@@ -309,7 +309,7 @@ function cargarProductos(productosElegidos) {
                 </div>
                 
                 <div class="boton-detalles">
-                    <button class="producto-ver btn" onclick="toggleText('${producto.id}')" ontouchend="toggleText('${producto.id}')">Detalles</button>
+                    <button id="miBoton" class="producto-ver btn" onclick="toggleText('${producto.id}')" ontouchend="toggleText('${producto.id}')">Detalles</button>
                 
                     <div id="${producto.id}" class="descripcion">
                         ${producto.descripcion.map(parrafo => `<p>${parrafo}</p>`).join('')}
@@ -354,6 +354,7 @@ function toggleText(id) {
     }
 }
 
+/*
 document.getElementById('login-form').addEventListener('submit', function(event) {
     event.preventDefault(); // Evita que el formulario se envíe
   
@@ -384,3 +385,36 @@ btnMostrarVentana.addEventListener('click', function() {
 btnCerrarVentana.addEventListener('click', function() {
   ventanaEmergente.style.display = 'none'; // Ocultamos la ventana emergente al hacer clic en el botón de cerrar
 });
+*/
+
+
+// Obtener el elemento del botón
+var boton = document.getElementById('miBoton');
+
+// Bandera para indicar si se está deslizando
+var deslizando = false;
+
+// Manejador de evento para el inicio del deslizamiento
+function inicioDeslizamiento() {
+    deslizando = true;
+    boton.disabled = true; // Desactivar el botón durante el deslizamiento
+}
+
+// Manejador de evento para el final del deslizamiento
+function finDeslizamiento() {
+    deslizando = false;
+    boton.disabled = false; // Volver a activar el botón al final del deslizamiento
+}
+
+// Manejador de evento para toque en el botón
+function toqueEnBoton() {
+    if (!deslizando) {
+        // Si no se está deslizando, realizar la acción deseada
+        console.log('Botón tocado');
+    }
+}
+
+// Agregar oyentes de eventos
+boton.addEventListener('touchstart', inicioDeslizamiento);
+boton.addEventListener('touchend', finDeslizamiento);
+boton.addEventListener('click', toqueEnBoton);

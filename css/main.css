@@ -1,13 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
-    --clr-main: #ce8737;
-    --clr-main-light: #cc6403;
+    --clr-main: #8B4513;
+    /*
+    --clr-main: #4A2B14;
+    --clr-main: #8B4513;
+    --clr-main: #D2B48C;
+    --clr-main: #FFF8DC;
+    --clr-main: #FFD700;
+    */
+    --clr-beige: #D2B48C;
+    --clr-main-light: #FFD700;
     --clr-white: #ececec;
     --clr-gray: #e2e2e2;
     --clr-red: #961818;
 }
-
+/* #966a42 marroncito | #4b634f verde */
 * {
     margin: 0;
     padding: 0;
@@ -58,6 +66,7 @@ aside {
 }
 
 /* Login */
+/*
 .login-container {
     max-width: 300px;
     margin: 100px auto;
@@ -90,7 +99,7 @@ button:hover {
 }
 
 /* Prueba */
-
+/*
 #mostrarVentana {
     width: auto;
     padding: 10px;
@@ -98,14 +107,14 @@ button:hover {
 }
 
 .ventanaEmergente {
-    display: none; /* Para ocultar la ventana emergente por defecto */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
-    z-index: 9999; /* Asegura que la ventana emergente esté sobre otros elementos */
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
 }
   
 .contenidoVentana {
@@ -121,7 +130,7 @@ button:hover {
 .contenidoVentana h2 {
     color: var(--clr-main-light);
 } 
-  
+  */
 /* Menu */
 
 .menu {
@@ -145,7 +154,7 @@ button:hover {
 }
 
 .boton-menu.active {
-    background-color: var(--clr-white);
+    background-color: var(--clr-beige);
     color: var(--clr-main);
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
@@ -187,6 +196,8 @@ button:hover {
 }
 
 main {
+    background-image: url('fondocafe.jpg');
+    background-position: center;
     background-color: var(--clr-white);
     margin: 1rem;
     margin-left: 0;
@@ -195,7 +206,12 @@ main {
 }
 
 .titulo-principal {
-    color: var(--clr-main);
+    color: var(--clr-white);
+    text-shadow: 
+        -1px -1px 0 black,  
+         1px -1px 0 black,
+        -1px  1px 0 black,
+         1px  1px 0 black;
     margin-bottom: 2rem;
 }
 
@@ -359,6 +375,7 @@ main {
     .producto-ver {
         /*display: none;*/
         padding: .2rem;
+        background-color: var(--clr-beige);
     }
 
     .producto-ver:hover {
