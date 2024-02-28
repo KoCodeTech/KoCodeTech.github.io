@@ -3,22 +3,7 @@ const productos = [
     //Promociones
     {
         id: "promocion-01",
-        titulo: "Café con leche, Té o chocolate + Jugo natural + Soda + 2 Facturas o Raspaditas",
-        imagen: "./img/abrigos/01.jpg",
-        descripcion: [
-                      "2 tortitas",
-                      "1 cafe",
-                      "1 chocolate"
-                    ],
-        categoria:{
-            nombre: "Promos",
-            id: "promociones"
-        },
-        precio: 1800
-    },
-    {
-        id: "promocion-02",
-        titulo: "Super promo",
+        titulo: "Super promo 1",
         imagen: "./img/abrigos/01.jpg",
         descripcion: [
                       "Café con leche, Té o chocolate + Jugo natural + Soda + 2 Facturas o Raspaditas"
@@ -29,95 +14,110 @@ const productos = [
         },
         precio: 1800
     },
+    {
+        id: "promocion-02",
+        titulo: "Super promo 2",
+        imagen: "./img/abrigos/01.jpg",
+        descripcion: [
+                      "Café con leche, Té o Chocolate + Soda + Porción de Macedonia"
+                    ],
+        categoria:{
+            nombre: "Promos",
+            id: "promociones"
+        },
+        precio: 3700
+    },
+    {
+        id: "promocion-03",
+        titulo: "Super promo 3",
+        imagen: "./img/abrigos/01.jpg",
+        descripcion: [
+                      "Café con leche, Té o Chocolate + Soda + Tostados de Jamón y queso o primavera"
+                    ],
+        categoria:{
+            nombre: "Promos",
+            id: "promociones"
+        },
+        precio: 3700
+    },
+    
 
     //Café
     {
-        id: "abrigo-01",
+        id: "cafe-01",
         titulo: "Café pocillo/cortado",
         imagen: "./img/abrigos/01.jpg",
         descripcion: [
-                      "2 tortitas",
-                      "1 cafe",
-                      "1 chocolate"
-                    ],
+            "Café espresso con una pequeña cantidad de leche"
+            ],
         categoria:{
             nombre: "Cafeteria",
-            id: "abrigos"
+            id: "cafe"
         },
         precio: 900
     },
     {
-        id: "abrigo-02",
+        id: "cafe-02",
         titulo: "Café jarrijo/cortado",
         imagen: "./img/abrigos/02.jpg",
         descripcion: [
-            "4 tortitas",
-            "2 cafe",
-            "8 chocolate"
+            ""
           ],
         categoria:{
             nombre: "Cafeteria",
-            id: "abrigos"
+            id: "cafe"
         },
         precio: 1100
     },
     {
-        id: "abrigo-03",
+        id: "cafe-03",
         titulo: "Café doble/con leche",
         imagen: "./img/abrigos/03.jpg",
         descripcion: [
-            "2 tortitas",
-            "1 cafe",
-            "1 chocolate"
+            ""
           ],
         categoria:{
             nombre: "Cafeteria",
-            id: "abrigos"
+            id: "cafe"
         },
         precio: 1500
     },
     {
-        id: "abrigo-04",
+        id: "cafe-04",
         titulo: "Capuchino",
         imagen: "./img/abrigos/03.jpg",
         descripcion: [
-            "2 tortitas",
-            "1 cafe",
-            "1 chocolate"
+            "Café expreso y leche montada con vapor para darle cremosidad"
           ],
         categoria:{
             nombre: "Cafeteria",
-            id: "abrigos"
+            id: "cafe"
         },
         precio: 1700
     },
     {
-        id: "abrigo-05",
+        id: "cafe-05",
         titulo: "Submarino",
         imagen: "./img/abrigos/03.jpg",
         descripcion: [
-            "2 tortitas",
-            "1 cafe",
-            "1 chocolate"
+            ""
           ],
         categoria:{
             nombre: "Cafeteria",
-            id: "abrigos"
+            id: "cafe"
         },
         precio: 1700
     },
     {
-        id: "abrigo-06",
+        id: "cafe-06",
         titulo: "Té distintas variedades",
         imagen: "./img/abrigos/03.jpg",
         descripcion: [
-            "2 tortitas",
-            "1 cafe",
-            "1 chocolate"
+            ""
           ],
         categoria:{
             nombre: "Cafeteria",
-            id: "abrigos"
+            id: "cafe"
         },
         precio: 750
     },
@@ -125,77 +125,69 @@ const productos = [
     //Bebidas
 
     {
-        id: "camiseta-01",
+        id: "bebida-01",
         titulo: "Gaseosas",
         imagen: "./img/camisetas/01.jpg",
         descripcion: [
-            "2 tortitas",
-            "1 cafe",
-            "1 chocolate"
+            "CocaCola (Original | Light | Zero)",
+            "Sprite",
+            "Fanta"
           ],
         categoria:{
             nombre: "Bebidas",
-            id: "camisetas"
+            id: "bebidas"
         },
         precio: 1500
     },
     {
-        id: "camiseta-02",
+        id: "bebida-02",
         titulo: "Aguas saborizadas",
         imagen: "./img/camisetas/02.jpg",
         descripcion: [
-            "2 tortitas",
-            "1 cafe",
-            "1 chocolate"
+            "Sabores: Pomelo, Manzana, Naranja"
           ],
         categoria:{
             nombre: "Bebidas",
-            id: "camisetas"
+            id: "bebidas"
         },
         precio: 1000
     },
     {
-        id: "camiseta-03",
+        id: "bebida-03",
         titulo: "Agua con o sin gas",
         imagen: "./img/camisetas/03.jpg",
         descripcion: [
-            "2 tortitas",
-            "1 cafe",
-            "1 chocolate"
+            ""
           ],
         categoria:{
             nombre: "Bebidas",
-            id: "camisetas"
+            id: "bebidas"
         },
         precio: 800
     },
     {
-        id: "camiseta-04",
+        id: "bebida-04",
         titulo: "Licuados de 330cc",
         imagen: "./img/camisetas/03.jpg",
         descripcion: [
-            "2 tortitas",
-            "1 cafe",
-            "1 chocolate"
+            ""
           ],
         categoria:{
             nombre: "Bebidas",
-            id: "camisetas"
+            id: "bebidas"
         },
         precio: 2300
     },
     {
-        id: "camiseta-05",
+        id: "bebida-05",
         titulo: "Jugo de naranja de 330cc",
         imagen: "./img/camisetas/03.jpg",
         descripcion: [
-            "2 tortitas",
-            "1 cafe",
-            "1 chocolate"
+            ""
           ],
         categoria:{
             nombre: "Bebidas",
-            id: "camisetas"
+            id: "bebidas"
         },
         precio: 2400
     },
@@ -203,107 +195,93 @@ const productos = [
     //Facturas
 
     {
-        id: "pantalon-01",
+        id: "factura-01",
         titulo: "Facturas",
         imagen: "./img/pantalones/01.jpg",
         descripcion: [
-            "2 tortitas",
-            "1 cafe",
-            "1 chocolate"
+            ""
           ],
         categoria:{
             nombre: "Facturas",
-            id: "pantalones"
+            id: "facturas"
         },
         precio: 400
     },
     {
-        id: "pantalon-02",
+        id: "factura-02",
         titulo: "Raspaditas",
         imagen: "./img/pantalones/02.jpg",
         descripcion: [
-            "2 tortitas",
-            "1 cafe",
-            "1 chocolate"
+            ""
           ],
         categoria:{
             nombre: "Facturas",
-            id: "pantalones"
+            id: "facturas"
         },
         precio: 270
     },
     {
-        id: "pantalon-03",
+        id: "factura-03",
         titulo: "Tostados",
         imagen: "./img/pantalones/03.jpg",
         descripcion: [
-            "2 tortitas",
-            "1 cafe",
-            "1 chocolate"
+            ""
           ],
         categoria:{
             nombre: "Facturas",
-            id: "pantalones"
+            id: "facturas"
         },
         precio: 2700
     },
     {
-        id: "pantalon-04",
+        id: "factura-04",
         titulo: "Tostadas x3",
         imagen: "./img/pantalones/03.jpg",
         descripcion: [
-            "2 tortitas",
-            "1 cafe",
-            "1 chocolate"
+            ""
           ],
         categoria:{
             nombre: "Facturas",
-            id: "pantalones"
+            id: "facturas"
         },
         precio: 200
     },
     {
-        id: "pantalon-05",
+        id: "factura-05",
         titulo: "Untables x2",
         imagen: "./img/pantalones/03.jpg",
         descripcion: [
-            "2 tortitas",
-            "1 cafe",
-            "1 chocolate"
+            ""
           ],
         categoria:{
             nombre: "Facturas",
-            id: "pantalones"
+            id: "facturas"
         },
         precio: 540
     },
     {
-        id: "pantalon-06",
+        id: "factura-06",
         titulo: "Media luna con Jamón y queso",
         imagen: "./img/pantalones/03.jpg",
         descripcion: [
-            "2 tortitas",
-            "1 cafe",
-            "1 chocolate"
+            ""
           ],
         categoria:{
             nombre: "Facturas",
-            id: "pantalones"
+            id: "facturas"
         },
         precio: 1400
     },
     {
-        id: "pantalon-07",
+        id: "factura-07",
         titulo: "Criollo con jámon y queso",
         imagen: "./img/pantalones/03.jpg",
         descripcion: [
-            "2 tortitas",
-            "1 cafe",
-            "1 chocolate"
+            ""
           ],
         categoria:{
             nombre: "Facturas",
-            id: "pantalones"
+            id: "facturas"
         },
         precio: 1200
     },
@@ -331,7 +309,7 @@ function cargarProductos(productosElegidos) {
                 </div>
                 
                 <div class="boton-detalles">
-                    <button class="producto-ver btn" onclick="toggleText('${producto.id}')" ontouchstart="toggleText('${producto.id}')">Detalles</button>
+                    <button class="producto-ver btn" onclick="toggleText('${producto.id}')" ontouchend="toggleText('${producto.id}')">Detalles</button>
                 
                     <div id="${producto.id}" class="descripcion">
                         ${producto.descripcion.map(parrafo => `<p>${parrafo}</p>`).join('')}
