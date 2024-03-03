@@ -34,16 +34,14 @@ a {
 }
 
 aside {
-    padding: 2rem;
-    padding-right: 0;
-    color: var(--clr-white);
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    display: none;
+    display: block;
+    height: auto; /* Altura automática */
+    position: static; /* Eliminar posición fija */
+    padding: 8%; /* Reducir el relleno */
+    background-image: url("../img/fondos/laPorteñaLogo.jpg");
+    background-size: cover; /* Ajustar la imagen para cubrir todo el contenedor */
+    background-position: center; /* Centrar la imagen dentro del contenedor */
+    background-repeat: no-repeat;
 }
 
 .menu-logo {
@@ -54,8 +52,8 @@ aside {
     font-size: larger;
     margin-bottom: 15px;
     background-color: black;
-    margin-left: -16px;
-    margin-right: -16px;
+    margin-left: -48px;
+    margin-right: -48px;
     padding: 0.2rem;
 }
 
@@ -104,6 +102,7 @@ main {
     background-color: var(--clr-white);
     margin-left: 0;
     padding: 3rem;
+    padding-top: 0;
 }
 
 .titulo-principal {
@@ -134,7 +133,8 @@ main {
     background-color: var(--clr-main-light);
     color: var(--clr-white);
     padding: .5rem;
-    border-radius: 1rem;
+    border-radius: .5rem;
+    border: 2px solid var(--clr-beige);
     position: relative;
     display: flex;
     flex-direction: column;
@@ -180,14 +180,12 @@ main {
     }
 
     aside {
-        display: block;
-        height: auto; /* Altura automática */
-        position: static; /* Eliminar posición fija */
-        padding: 1rem; /* Reducir el relleno */
-        background-image: url("../img/fondos/laPorteñaLogo.jpg");
-        background-size: cover; /* Ajustar la imagen para cubrir todo el contenedor */
-        background-position: center; /* Centrar la imagen dentro del contenedor */
-        background-repeat: no-repeat;
+        padding: 5%;
+    }
+
+    .menu-logo {
+        margin-left: -16px;
+        margin-right: -16px;
     }
 
     .menu-img {
@@ -239,8 +237,6 @@ main {
     .producto-detalles {
         width: 100%;
         margin-top: 0;
-        border-radius: .5rem;
-        border: 2px solid var(--clr-beige);
     }
     
     .boton-detalles {
