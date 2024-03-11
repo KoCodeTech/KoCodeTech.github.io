@@ -110,6 +110,84 @@ const productos = [
     },
     {
         id: "cafe-06",
+        titulo: "Café Helado",
+        imagen: "",
+        descripcion: [
+            ""
+            ],
+        categoria:{
+            nombre: "Cafeteria",
+            id: "cafe"
+        },
+        precio: 0
+    },
+    {
+        id: "cafe-07",
+        titulo: "Café Irlandes",
+        imagen: "",
+        descripcion: [
+            ""
+            ],
+        categoria:{
+            nombre: "Cafeteria",
+            id: "cafe"
+        },
+        precio: 0
+    },
+    {
+        id: "cafe-08",
+        titulo: "Café Baileys",
+        imagen: "",
+        descripcion: [
+            ""
+            ],
+        categoria:{
+            nombre: "Cafeteria",
+            id: "cafe"
+        },
+        precio: 0
+    },
+    {
+        id: "cafe-09",
+        titulo: "Caramel Macchiato",
+        imagen: "",
+        descripcion: [
+            ""
+            ],
+        categoria:{
+            nombre: "Cafeteria",
+            id: "cafe"
+        },
+        precio: 0
+    },
+    {
+        id: "cafe-10",
+        titulo: "Frappé",
+        imagen: "",
+        descripcion: [
+            ""
+            ],
+        categoria:{
+            nombre: "Cafeteria",
+            id: "cafe"
+        },
+        precio: 0
+    },
+    {
+        id: "cafe-11",
+        titulo: "Mocca",
+        imagen: "",
+        descripcion: [
+            ""
+            ],
+        categoria:{
+            nombre: "Cafeteria",
+            id: "cafe"
+        },
+        precio: 0
+    },
+    {
+        id: "cafe-12",
         titulo: "Té distintas variedades",
         imagen: "",
         descripcion: [
@@ -122,7 +200,7 @@ const productos = [
         precio: 750
     },
 
-    //Bebidas
+    //Bebidas y Licuados
 
     {
         id: "bebida-01",
@@ -132,7 +210,7 @@ const productos = [
             ""
           ],
         categoria:{
-            nombre: "Bebidas",
+            nombre: "Bebidas | Licuados",
             id: "bebidas"
         },
         precio: 1500
@@ -165,6 +243,32 @@ const productos = [
     },
     {
         id: "bebida-04",
+        titulo: "Jugo de naranja de 330cc",
+        imagen: "",
+        descripcion: [
+            ""
+          ],
+        categoria:{
+            nombre: "Bebidas",
+            id: "bebidas"
+        },
+        precio: 2400
+    },
+    {
+        id: "bebida-05",
+        titulo: "Licor Tía María",
+        imagen: "",
+        descripcion: [
+            ""
+          ],
+        categoria:{
+            nombre: "Bebidas",
+            id: "bebidas"
+        },
+        precio: 0
+    },
+    {
+        id: "bebida-06",
         titulo: "Licuados de 330cc",
         imagen: "",
         descripcion: [
@@ -177,18 +281,19 @@ const productos = [
         precio: 2300
     },
     {
-        id: "bebida-05",
-        titulo: "Jugo de naranja de 330cc",
+        id: "bebida-07",
+        titulo: "Licuado de Chocolate",
         imagen: "",
         descripcion: [
             ""
           ],
         categoria:{
-            nombre: "Bebidas",
+            nombre: "Licuados",
             id: "bebidas"
         },
-        precio: 2400
+        precio: 0
     },
+    
 
     //Facturas
 
@@ -200,7 +305,7 @@ const productos = [
             ""
           ],
         categoria:{
-            nombre: "Facturas",
+            nombre: "Masas Finas",
             id: "facturas"
         },
         precio: 400
@@ -283,7 +388,231 @@ const productos = [
         },
         precio: 1200
     },
+    {
+        id: "factura-08",
+        titulo: "Masas Secas",
+        imagen: "",
+        descripcion: [
+            ""
+          ],
+        categoria:{
+            nombre: "Facturas",
+            id: "facturas"
+        },
+        precio: 1200
+    },
+    {
+        id: "factura-09",
+        titulo: "Masas Finas",
+        imagen: "",
+        descripcion: [
+            ""
+          ],
+        categoria:{
+            nombre: "Facturas",
+            id: "facturas"
+        },
+        precio: 1200
+    },
+
+    //Tortas y Tartas
+
+    {
+        id: "tortas-01",
+        titulo: "Macedonia",
+        imagen: "./img/Tortas/torta-01.jpg",
+        descripcion: [
+            "Limón, Frutas, Tiramisu"
+          ],
+        categoria:{
+            nombre: "Tortas | Tartas",
+            id: "tortas"
+        },
+        precio: 0
+    },
+    {
+        id: "tortas-02",
+        titulo: "Chocotorta",
+        imagen: "./img/Tortas/torta-01.jpg",
+        descripcion: [
+            ""
+          ],
+        categoria:{
+            nombre: "Tortas",
+            id: "tortas"
+        },
+        precio: 0
+    },
+    {
+        id: "tortas-03",
+        titulo: "Selva Negra",
+        imagen: "./img/Tortas/torta-01.jpg",
+        descripcion: [
+            ""
+          ],
+        categoria:{
+            nombre: "Tortas",
+            id: "tortas"
+        },
+        precio: 0
+    },
+
+    //Tartas
+
+    {
+        id: "tortas-04",
+        titulo: "Lemon Pie",
+        imagen: "",
+        descripcion: [
+            ""
+          ],
+        categoria:{
+            nombre: "Tartas",
+            id: "tortas"
+        },
+        precio: 0
+    },
+    {
+        id: "tortas-05",
+        titulo: "Cabsha",
+        imagen: "",
+        descripcion: [
+            ""
+          ],
+        categoria:{
+            nombre: "Tartas",
+            id: "tortas"
+        },
+        precio: 0
+    },
+    {
+        id: "tortas-06",
+        titulo: "Apolos",
+        imagen: "",
+        descripcion: [
+            "Lleva frutas y crema chantillí"
+          ],
+        categoria:{
+            nombre: "Tartas",
+            id: "tortas"
+        },
+        precio: 0
+    },
+    {
+        id: "tortas-07",
+        titulo: "Bombones",
+        imagen: "",
+        descripcion: [
+            ""
+          ],
+        categoria:{
+            nombre: "Tartas",
+            id: "tortas"
+        },
+        precio: 0
+    },
+    {
+        id: "tortas-08",
+        titulo: "Merengues",
+        imagen: "",
+        descripcion: [
+            "Con dulce de leche o crema"
+          ],
+        categoria:{
+            nombre: "Tartas",
+            id: "tortas"
+        },
+        precio: 0
+    },
+    {
+        id: "tortas-09",
+        titulo: "Tortas Tradicionales",
+        imagen: "",
+        descripcion: [
+            "Con Dulce de leche y crema chantilli"
+          ],
+        categoria:{
+            nombre: "Tartas",
+            id: "tortas"
+        },
+        precio: 0
+    },
+    {
+        id: "tortas-10",
+        titulo: "Adornos de Tortas",
+        imagen: "",
+        descripcion: [
+            ""
+          ],
+        categoria:{
+            nombre: "Tartas",
+            id: "tortas"
+        },
+        precio: 0
+    },
+
+    //Pizzas | Empanadas | Sanguchitos
+
+    {
+        id: "salados-01",
+        titulo: "Pizza Margarita",
+        imagen: "",
+        descripcion: [
+            ""
+          ],
+        categoria:{
+            nombre: "Delicias Casuales",
+            id: "salados"
+        },
+        precio: 0
+    },
+
+    //Empanadas
+
+    {
+        id: "salados-02",
+        titulo: "Epanadas de Vigilia",
+        imagen: "",
+        descripcion: [
+            ""
+          ],
+        categoria:{
+            nombre: "Delicias Casuales",
+            id: "salados"
+        },
+        precio: 0
+    },
+    {
+        id: "salados-03",
+        titulo: "Epanadas de Bacalao",
+        imagen: "",
+        descripcion: [
+            ""
+          ],
+        categoria:{
+            nombre: "Delicias Casuales",
+            id: "salados"
+        },
+        precio: 0
+    },
+
+    //Sanguches
+
+    {
+        id: "salados-04",
+        titulo: "Sanguchitos",
+        imagen: "",
+        descripcion: [
+            ""
+          ],
+        categoria:{
+            nombre: "Delicias Casuales",
+            id: "salados"
+        },
+        precio: 0
+    },
 ];
+console.log("Productos:",productos.length);
 
 const contenedorProductos = document.querySelector("#contenedor-productos");
 const botonesCategorias = document.querySelectorAll(".boton-categoria");
@@ -299,12 +628,14 @@ function cargarProductos(productosElegidos) {
         const div = document.createElement("div");
         div.classList.add("producto");
         div.innerHTML = `
+            ${producto.imagen[0] !== "" ? `<img class="producto-imagen" src="${producto.imagen}">` : ""}
+
             <div class="producto-detalles">
+
                 <div class="producto-etiquetas">
                     <h3 class="producto-titulo">${producto.titulo}</h3>
                     <p class="producto-precio">$${producto.precio}</p>
                 </div>
-                
                 
                 <div class="boton-detalles">
                     ${producto.descripcion[0] !== "" ? `<button id="${producto.id}-btn" class="producto-ver btn" onclick="toggleText('${producto.id}')" ontouchend="toggleText('${producto.id}')">Detalles</button>` : ""}

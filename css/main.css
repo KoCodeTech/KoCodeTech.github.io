@@ -245,14 +245,24 @@ main {
         flex-direction: column;
     }
 
+    .producto-etiqueta {
+        display: flex;
+    }
+
     .producto-ver {
         padding: .2rem;
         background-color: var(--clr-beige);
-        margin-left: 35%;
-        margin-right: 35%;
+        margin-left: 30%;
+        margin-right: 30%;
     }
 
     .producto-ver:hover {
         pointer-events: none;
+    }
+
+    .producto-imagen {
+        max-width: 100px;
+        max-height: 100px;
+        border-radius: .5rem;
     }
 }
