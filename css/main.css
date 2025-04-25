@@ -142,6 +142,10 @@ main {
     gap: .25rem;
 }
 
+.producto-imagen {
+    display: none;
+}
+
 .producto-titulo {
     font-size: 1rem;
 }
@@ -261,8 +265,9 @@ main {
     }
 
     .producto-imagen {
+        display: block;
         max-width: 100px;
-        max-height: 100px;
+        max-height: 108px;
         border-radius: .5rem;
     }
 }
