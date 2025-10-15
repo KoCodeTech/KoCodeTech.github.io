@@ -1,34 +1,65 @@
 import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 export function ContentCard() {
   const { id } = useParams();
 
+  // Estado para almacenar los SVG cargados dinámicamente
+  const [svgs, setSvgs] = useState({});
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Importar dinámicamente todos los SVG de forma asíncrona
+    const loadSvgs = async () => {
+      const modules = import.meta.glob("./assets/*.svg");
+      const loadedSvgs = {};
+
+      for (const path in modules) {
+        const module = await modules[path]();
+        loadedSvgs[path] = module.default;
+      }
+
+      setSvgs(loadedSvgs);
+      setIsLoading(false);
+    };
+
+    loadSvgs();
+  }, []);
+
   // Contenido dinámico basado en el id
   const contentData = {
     1: {
-      title: "Contenido para la InfoCard 1",
-      description: "Este es el contenido detallado para la primera tarjeta.",
+      title: "ContentCard 1",
+      image: "./assets/comic-ej.svg",
     },
     2: {
-      title: "Contenido para la InfoCard 2",
-      description: "Este es el contenido detallado para la segunda tarjeta.",
-    },
-    3: {
-      title: "Contenido para la InfoCard 3",
-      description: "Este es el contenido detallado para la tercera tarjeta.",
+      title: null,
+      image: null,
     },
   };
 
   // Obtener el contenido correspondiente al id
   const content = contentData[id] || {
     title: "Contenido no encontrado",
-    description: "No hay contenido disponible para esta tarjeta.",
+    image: "./assets/no-image.svg",
   };
 
+  // Asegurar valores por defecto para title e image
+  const title = content.title || "Título no disponible";
+  const image = svgs[content.image] || svgs["./assets/no-image.svg"];
+
+  if (isLoading) {
+    return (
+      <p className="p-6 m-6 bg-zinc-700 rounded-lg shadow-md text-5xl">
+        Cargando contenido...
+      </p>
+    );
+  }
+
   return (
-    <article>
-      <h1>{content.title}</h1>
-      <p>{content.description}</p>
+    <article className="p-6 m-6 bg-zinc-700 rounded-lg shadow-md">
+      <h1>{title}</h1>
+      <img src={image} alt={title} />
     </article>
   );
 }
