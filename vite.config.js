@@ -4,6 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+  base: "/KoCodeTech.github.io/", // Cambia esto según tu repositorio
   build: {
     rollupOptions: {
       output: {
